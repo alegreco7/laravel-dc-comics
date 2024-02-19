@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicController as ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $socials = config('footer_socials');
+    $header_links = config('header_links');
+    $footer_lists = config('footer_list');
+    $banner_infos = config('banner_infos');
+    return view('home', compact('socials', 'footer_lists', 'banner_infos', 'header_links'));
+})->name('home');
+
+Route::get('/movies', function () {
+    $socials = config('footer_socials');
+    $header_links = config('header_links');
+    $footer_lists = config('footer_list');
+    $banner_infos = config('banner_infos');
+
+    return view('movies', compact('socials', 'footer_lists', 'banner_infos', 'header_links'));
+})->name('movies');
+
+Route::resource('comics', ComicController::class);
