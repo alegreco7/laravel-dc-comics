@@ -12,7 +12,12 @@
     <div class="py-5 mt-2">
         <div class="my-container-lg">
             <div class="row">
-                <div class="col-8 comic-info-container">
+
+                <div class="col-12">
+                    <a class="default-btn" href="{{ route('comics.edit', ['comic' => $comic['id']]) }}"> Edit comic</a>
+                </div>
+                <div class="col-8 mt-4 comic-info-container">
+
                     <div>
                         <h1>{{ $comic['title'] }}</h1>
                     </div>
@@ -68,6 +73,7 @@
                 <div class="col-12">
                     <div class="talent-specs-container">
                         <div class="row">
+
                             <div class="col-6">
                                 <div class="table-container">
                                     <h5>Talent</h5>
