@@ -276,6 +276,7 @@ main {
     }
 }
 
+// ADDING COMICS SECTION
 .title-container {
     h1 {
         text-transform: uppercase;
@@ -293,6 +294,7 @@ form {
         font-weight: 700;
         padding: 5px 0px;
     }
+
 
     input {
         background-color: transparent;
@@ -318,6 +320,12 @@ form {
         }
     }
 }
+
+.my-is-invalid {
+    border-color: red;
+
+}
+
 
 // MAIN JUMBOTRON
 .default-badge-bg {
